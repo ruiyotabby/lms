@@ -52,11 +52,11 @@ class User(AbstractBaseUser):
     REQUIRED_FIELDS = []
 
     def get_full_name(self):
-        #user is identified by name
-        return self.name
+        #user is identified by pjnumber
+        return self.pjnumber
     
     def __str__(self):
-        return self.name
+        return self.pjnumber
 
     def has_perm(self, perm, obj=None):
         """Does User have user specific permissions?"""#Yes, always
