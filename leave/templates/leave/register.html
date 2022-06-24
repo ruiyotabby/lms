@@ -1,0 +1,85 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'lmis/css/styl.css' %}">
+    <title>Register</title>
+</head>
+<body>
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <div class="title"><h1>Leave Management System Registration Form</h1></div>
+            <div class="details">
+                <Label>First Name:</Label>
+                <input type="text" id='fname' placeholder="Enter your First Name" name="fname" required>
+                <small></small>
+            </div>
+            <div class="details">
+                <Label>Last Name:</Label>
+                <input type="text" id='lname' placeholder="Enter your Last Name" name="lname" required>
+                <small></small>
+            </div>
+            
+            <div class="details">
+                <Label>Personal Number:</Label>
+                <input type="number" id='pjnumber' placeholder="PJ Number" name="pjnumber" required>
+                <small></small>
+            </div>
+            <div class="details">
+                <Label>Designation:</Label>
+                <input type="text" id='designation' placeholder="Designation" name="designation" required>
+                <small></small>
+            </div>
+            <div class="details">
+                <Label>Directorate/Station:</Label>
+                <input type="text" id='station' placeholder="Enter your Station" name="station" required>
+                <small></small>
+            </div>
+            <div class="details">
+                <Label>Section:</Label>
+                <input type="text" id='section' placeholder="Enter Section" name="section" required>
+                <small></small>
+            </div>
+            <div class="details">
+                <Label>Phone Number:</Label>
+                <input type="text" id='number' placeholder="Phone Number" name="number" required>
+                <small></small>
+            </div>
+            <div class="details">
+                <Label>Email Address:</Label>
+                <input type="email" id='email' placeholder="Email Address" name="email" required>
+            </div>
+            <div class="details">
+                <Label>Password:</Label>
+                <input type="password" id='password1' placeholder="Type your password" name="password1" required>
+            </div>
+            <div class="details">
+                <Label>Confirm Password:</Label>
+                <input type="password" id='password2' placeholder="Confirm Your Password" name="password2" required>
+            </div >
+            {% comment %} {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %} {% endcomment %}
+
+            <div class="details">
+                
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{message}}
+                    </div>
+                {% endfor %}
+
+                <a>Already have an account?</a>
+                <a href="{% url 'login' %}">Login</a>
+            </div>
+            <div class="details" id="btn">
+                <button class="btn">Register</button> 
+            </div>
+        </div>
+    </form>
+</body>
+</html>
