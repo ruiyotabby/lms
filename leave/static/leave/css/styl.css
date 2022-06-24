@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg,#040702, #0ccc06, #f80606);
+}
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    border-radius: 5px;
+    padding: 25px 30px;
+    background: #628b59;
+    align-items: center;
+
+}
+
+
+.title{
+    width: 100%;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+    
+}
+
+#login_title{
+    padding-bottom: 5px;
+}
+
+div{
+    align-items: center;
+    display: block;
+    padding: 5px;
+    width: calc(100% / 2 - 20px);
+}
+
+.login{
+    display: block;
+    width: 100%;
+}
+.details{
+    display: inline-block;
+}
+
+input{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 16px;
+    border-color: #fff;
+    height: 30px;
+    width: 100%;  
+}                                                                                                                                                                                                                                                                   
+.container Label{
+    padding-bottom: 20px;
+}
+
+.container .btn{
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 10px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    /* width: 20%; */
+    justify-content: center;
+
+}
+#btn{
+    align-items: center;
+    justify-content: right;
+}
+
+a{
+    font-size: medium;
+    text-decoration: none;
+    text-align: center;
+}

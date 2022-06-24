@@ -20,7 +20,7 @@ class UserAdmin(BaseUserAdmin):
     fieldsets = (
         (None, {"fields": ('pjnumber', 'email', 'password')}),
         ('personal info', {'fields': ()}),
-        ('permissions', {'fields': ('admin')}),
+        ('permissions', {'fields': ('admin',)}),
     )
     
     add_fieldsets = (
