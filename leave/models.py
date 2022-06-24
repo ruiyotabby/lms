@@ -62,7 +62,7 @@ class User(AbstractBaseUser):
         """Does User have user specific permissions?"""#Yes, always
         return True
 
-    def has_module_perm(self, perm, app_label):
+    def has_module_perms(self, app_label):
         return True
 
     @property
