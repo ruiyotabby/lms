@@ -1,0 +1,15 @@
+{% extends 'lmis/main.html' %}
+{% load static %}
+
+{% block head1 %}
+<script type="text/javascript" src="{% static 'lmis/js/jquery.js' %}"></script>
+<title>Kericho Law Courts</title>
+{% endblock %}
+
+{% block content1 %}
+
+{% comment %} <a class="w3-bar-item w3-button w3-mobile w3-border-bottom w3-center w3-active-orange w3-hover-orange" id="homebtn" href="">Home</a> {% endcomment %}
+<a class="w3-bar-item w3-button w3-mobile w3-border-bottom w3-center w3-active-orange w3-hover-orange" id="loginbtn" href="{% url 'login' %}">Login</a>
+<a class="w3-bar-item w3-button w3-mobile w3-border-bottom w3-center w3-active-orange w3-hover-orange" id="registerbtn" href="{% url 'register' %}">Register</a>
+
+{% endblock %}
