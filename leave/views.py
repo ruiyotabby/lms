@@ -16,7 +16,9 @@ def registerPage(request):
             return redirect('login')
     else:
         form = RegisterForm()
-    return render(request, 'leave/register.html')
+
+    context = {'form': form}
+    return render(request, 'leave/register.html', context)
 
 def loginPage(request):
     return render(request, 'leave/login.html')

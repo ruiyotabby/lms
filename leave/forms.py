@@ -10,11 +10,11 @@ class RegisterForm(forms.ModelForm):
     """
 
     password = forms.CharField(widget=forms.PasswordInput)
-    password2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
+    password_2 = forms.CharField(label='Confirm Password', widget=forms.PasswordInput)
 
     class Meta:
         model = User
-        fields = ['pjnumber', 'email', 'fname', 'lname', 'designation', 'section', 'station']
+        fields = ['pjnumber', 'email', 'fname', 'lname', 'designation', 'section', 'station',]
 
     def clean_pjnumber(self):
         pjnumber = self.cleaned_data.get('pjnumber')

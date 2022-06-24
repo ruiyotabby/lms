@@ -7,6 +7,7 @@ class UserManager(BaseUserManager):
     def create_user(self, pjnumber, password=None):
         if not pjnumber:
             raise ValueError('Users must have pj numbers')
+
         user = self.model(
             pjnumber=pjnumber,
         )
@@ -17,7 +18,8 @@ class UserManager(BaseUserManager):
 
     def create_staffuser(self, pjnumber, password):
         user = self.create_user(
-            pjnumber, passwword=password
+            pjnumber, 
+            password=password,
         )
         user.staff = True
         user.save(using=self._db)
@@ -53,6 +55,9 @@ class User(AbstractBaseUser):
 
     def get_full_name(self):
         #user is identified by pjnumber
+        return self.pjnumber
+
+    def get_short_name(self):
         return self.pjnumber
     
     def __str__(self):
