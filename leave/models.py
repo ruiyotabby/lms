@@ -53,10 +53,10 @@ class User(AbstractBaseUser):
 
     def get_full_name(self):
         #user is identified by name
-        return self.pjnumber
+        return self.name
     
     def __str__(self):
-        return self.pjnumber
+        return self.name
 
     def has_perm(self, perm, obj=None):
         """Does User have user specific permissions?"""#Yes, always
