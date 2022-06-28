@@ -9,15 +9,14 @@ def homePage(request):
 def registerPage(request):
     if request.method == 'POST':
         form = RegisterForm(request.POST)
-        if form.is_valid():
-            form.save()
-            pjnumber = form.cleaned_data.get('pjnumber')
+        if form.clean_pjnumber():
+            # pjnumber = form.cleaned_data.get('pjnumber')
             messages.succes(request, f'Account created for {pjnumber}!')
             return redirect('login')
     else:
         form = RegisterForm()
 
-    context = {'form': form}
+    context = {'form':form}
     return render(request, 'leave/register.html', context)
 
 def loginPage(request):

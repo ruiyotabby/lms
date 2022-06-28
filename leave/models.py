@@ -81,6 +81,8 @@ class User(AbstractBaseUser):
     object = UserManager()
 
     """ 
+    Use this to refer to the custom user above:
+
     from django.contrib.auth import get_user_model
     user = get_user_model()
     """

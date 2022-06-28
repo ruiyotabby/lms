@@ -14,7 +14,7 @@ class RegisterForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['pjnumber', 'email', 'fname', 'lname', 'designation', 'section', 'station',]
+        fields = ['pjnumber', 'email', 'fname', 'lname', 'designation', 'section', 'station', 'password', 'password_2']
 
     def clean_pjnumber(self):
         pjnumber = self.cleaned_data.get('pjnumber')
